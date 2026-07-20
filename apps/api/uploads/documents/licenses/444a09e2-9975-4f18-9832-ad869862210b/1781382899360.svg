@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" class="w-full h-full">
+                    
+           
+                    <!-- AutoAdvant Text Layout -->
+                    <g transform="translate(135, 62)">
+                        <text font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="36" font-weight="300" letter-spacing="-0.5" fill="#0F172A">Auto</text>
+                        <text x="82" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="36" font-weight="800" fill="#0d9488">Advant</text>
+                        <text y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" letter-spacing="3.5" fill="#94A3B8" opacity="0.9">AUTOMATION & ENERGY</text>
+                    </g>
+                </svg>

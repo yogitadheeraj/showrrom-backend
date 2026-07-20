@@ -1,0 +1,26 @@
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+                    <rect width="512" height="512" rx="112" fill="#0f172a"/>
+                    
+                    <g transform="scale(3.8) translate(14, 18)">
+                        
+                <!-- Left Pillar of A (Reconstructed complete top apex) -->
+                <path d="M 55,8 L 12,85 L 34,85 L 55,45 Z" fill="#0d9488" />
+                
+                <!-- Right Pillar of A (Reconstructed complete top apex) -->
+                <path d="M 55,8 L 55,45 L 76,85 L 98,85 Z" fill="#E2E8F0" />
+                
+                <!-- Stylized sports car acting as the crossbar -->
+                <!-- Car cabin & body coordinates -->
+                <path d="M 32,70 C 32,66 35,65 42,65 Q 48,58 58,58 Q 68,58 72,65 C 77,65 80,67 80,72 L 82,75 L 30,75 Z" fill="#0F172A" />
+                
+                <!-- Wheels (Dynamic contrast) -->
+                <circle cx="44" cy="75" r="3.5" fill="#E2E8F0" />
+                <circle cx="68" cy="75" r="3.5" fill="#E2E8F0" />
+                
+                <!-- Reconstructed 3-pronged aerodynamic wings -->
+                <path d="M 1,52 L 23,45 L 0,63 L 28,54 L 5,74 L 40,62 Q 72,46 106,35 Q 64,35 32,42 L 18,46 Z" fill="#FFFFFF" />
+            
+                    </g>
+                </svg>
+            
