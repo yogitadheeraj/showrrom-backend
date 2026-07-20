@@ -11,11 +11,12 @@ export interface EmailBranding {
   primaryColor?: string; // hex e.g. "#18181b"
 }
 
-function base(previewText: string, bodyContent: string, branding: EmailBranding = {}): string {
-  const brand = branding.dealerName || SITE_NAME;
-  const primaryColor = branding.primaryColor || '#18181b';
-  const logoUrl = branding.dealerLogoUrl;
-console.log('Generating email with branding:', { brand, primaryColor, logoUrl });
+function base(previewText: string, bodyContent: string | EmailBranding = '', branding: EmailBranding = {}): string {
+  const effectiveBodyContent = typeof bodyContent === 'string' ? bodyContent : '';
+  const effectiveBranding = typeof bodyContent === 'string' ? branding : bodyContent;
+  const brand = effectiveBranding.dealerName || SITE_NAME;
+  const primaryColor = effectiveBranding.primaryColor || '#18181b';
+  const logoUrl = effectiveBranding.dealerLogoUrl;
   const headerContent = logoUrl
     ? `<img src="${logoUrl}" alt="${brand}" style="height:44px;max-width:200px;object-fit:contain;display:block;" />`
     : `<h1 style="margin:0;font-size:20px;font-weight:700;">🚗 ${brand}</h1>`;
@@ -50,7 +51,7 @@ console.log('Generating email with branding:', { brand, primaryColor, logoUrl })
     <div class="header">
       ${headerContent}
     </div>
-    ${bodyContent}
+    ${effectiveBodyContent}
     <div class="footer">
       <p>© ${new Date().getFullYear()} ${brand}. All rights reserved.</p>
       <p style="margin-top:4px;">Powered by <a href="${AUTOADVANT_URL}" style="color:#a1a1aa;text-decoration:underline;">AutoAdvant.com</a></p>

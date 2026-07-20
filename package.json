@@ -5,9 +5,10 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "npm run dev src/index.js",
+    "dev": "tsx src/index.ts",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
+    "prod": "NODE_ENV=production node dist/index.js",
     "lint": "echo \"No API linter configured yet\""
   },
   "dependencies": {
