@@ -85,7 +85,15 @@ async function start() {
   }, REMINDER_INTERVAL_MS);
 
   const server = app.listen(env.port, () => {
-    console.log(`API listening on http://localhost:${env.port}`);
+    console.log(`API listening on http://0.0.0.0:${env.port}`);
+  });
+
+  server.on('error', (error: NodeJS.ErrnoException) => {
+    if (error.code === 'EADDRINUSE') {
+      console.error(`[startup] Port ${env.port} is already in use.`);
+      process.exit(1);
+    }
+    throw error;
   });
 
   async function shutdown(signal: string) {
